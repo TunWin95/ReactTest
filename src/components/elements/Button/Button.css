@@ -1,0 +1,22 @@
+.button-group {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.popular, .rated, .upcoming, .playing {
+    background-color: transparent;
+    font-size: 10px;
+    width: 100px;
+    color: white;
+    padding: 5px;
+    border: 2px solid #00E4BD;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.popular:hover , .rated:hover, .upcoming:hover, .playing:hover {
+    background-color: #00E4BD;
+    font-weight: bold;
+}

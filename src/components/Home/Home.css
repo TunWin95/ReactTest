@@ -1,0 +1,39 @@
+.mov-title {
+    color: #00E4BD;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 5px !important;
+}
+
+.mov-desc, .mov-sub, .mov-date {
+    font-size: 11px;
+    margin-bottom: 0px;
+}
+
+.mov-desc, .mov-date {
+    color: white;
+}
+
+.mov-sub {
+    color: #00E4BD;
+}
+
+.mov-vote {
+    font-size: 15px;
+    bottom: 0;
+    width: 100%;
+    color: #00E4BD;
+    background-color: #213F67;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    position:absolute;
+}
+
+.mov-grid {
+    width: 90%;
+    position: relative;
+    overflow: auto;
+}

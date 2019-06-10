@@ -1,0 +1,18 @@
+.loadmorebtn {
+    position: absolute;
+    bottom: 0;
+    background-color: #00E4BD;
+    width: 92%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loadmorebtn p {
+    text-align: center;
+    font-weight: bold;
+    color:white;
+    padding: 6px;
+    margin-bottom: 0px !important;
+}

@@ -1,0 +1,115 @@
+.movieinfo-thumb {
+    height: 570px;
+    border: 1px solid lightblue;
+    margin-bottom: 20px;
+}
+
+.movieinfo-thumb img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.movieinfo-text {
+    width: 80%;
+}
+
+.info-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #00E4BD;
+}
+
+.info-subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.info-sub1, .info-sub2 {
+    border-bottom: 2px solid #00E4BD;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.info-sub1 {
+    height: 240px;
+}
+
+.info-overview {
+    color: gray;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.CircularProgressbar {
+    width: 10% !important;
+    color: white !important;
+}
+
+.CircularProgressbar-path {
+    stroke: #00E4BD !important;
+}
+
+.prog-desc {
+    margin-top: 10px;
+    color: white;
+    font-size: 13px;
+}
+
+.info-crew {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.info-dir {
+    font-size: 13px;
+    color: white;
+}
+
+.director {
+    font-size: 13px;
+    color: #00E4BD;
+}
+
+.faPlay {
+    border-radius: 50%;
+    font-size: 20px;
+    border: 2px solid #00E4BD;
+    padding: 10px;
+    color: #00E4BD;
+    margin-bottom: 10px;
+}
+
+.player-desc {
+    color: #00E4BD;
+    font-size: 10px;
+}
+
+.info-trailer {
+    background-color: #3C4765;
+    width: 80px;
+    height: 100px;
+    padding: 10px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.info-side, .info-trailer {
+    float: left;
+}
+
+.info-side-title {
+    color: white;
+    font-size: 13px;
+}
+
+.info-genre, .info-redate, .info-duration {
+    color: #00E4BD;
+    font-size: 13px;
+}
+
+
+
+
+

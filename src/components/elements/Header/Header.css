@@ -1,0 +1,24 @@
+.head-cap{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #00E4BD;
+    padding-bottom: 0px;
+    width: 100px;
+    margin-bottom: 50px !important;
+}
+
+.head-cap p {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.back-home {
+    width: 130px;
+}
+
+.back-home a {
+    display: block;
+    color: #00E4BD;
+    height: 30px;
+}
