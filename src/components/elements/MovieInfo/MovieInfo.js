@@ -24,16 +24,17 @@ const MovieInfo = (props) => {
                     <div className="movieinfo-text">
                     <p className="info-title">{props.movie.title}</p>
                         <div className="info-sub1">
-                            <div class="cir-progress">
+                            <div className="cir-progress">
                                 <CircularProgressbar value={props.movie.vote_average * 10} maxValue={100} text={`${props.movie.vote_average * 10}%`} />
                                 <p className="prog-desc">User Score</p>
                             </div>
                             <div className="info-trailer">
                                 <FontAwesome className="faPlay" name="play" />
-                                <p class="player-desc">Play Trailer</p>
+                                <p className="player-desc">Play Trailer</p>
                             </div>
                             <div className="info-side">
                                 <table>
+                                    <tbody>
                                     <tr>
                                         <td className="info-side-title">Genres</td>
                                         <td>&nbsp;&nbsp;&nbsp;</td>
@@ -44,13 +45,14 @@ const MovieInfo = (props) => {
                                     <tr>
                                         <td className="info-side-title">Release Year</td>
                                         <td>&nbsp;&nbsp;&nbsp;</td>
-                                        <td className="info-redate">{props.movie.release_date}</td>
+                                        <td className="info-redate">{new Date(props.movie.release_date).getFullYear()}</td>
                                     </tr>
                                     <tr>
                                         <td className="info-side-title">Duration</td>
                                         <td>&nbsp;&nbsp;&nbsp;</td>
                                         <td className="info-duration"></td>
                                     </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>

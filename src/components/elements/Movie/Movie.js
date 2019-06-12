@@ -7,9 +7,20 @@ import { Container, Row, Col } from 'reactstrap';
 import { Button } from 'reactstrap';
 import FontAwesome from 'react-fontawesome';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './Movie.css';
 
 class Movie extends Component {
+
+    static propTypes = {
+        watchlist: PropTypes.array,
+        emitter: PropTypes.object
+    }
+
+    constructor(props){
+        super(props)
+    }
+
     state = {
         movie: null,
         actors: null,
@@ -18,6 +29,7 @@ class Movie extends Component {
     }
 
     componentDidMount() {
+        console.log(this.props.movieId);
         this.setState({ loading: true })
         const endpoint = `${API_URL}movie/${this.props.match.params.movieId}?api_key=${API_KEY}&language=en-US`;
         this.fetchItems(endpoint);
@@ -51,6 +63,11 @@ class Movie extends Component {
     }
 
     render() {
+        console.log(this.props.watchlist);
+        const m = this.state.movie;
+        const isOnWatchlist = false;
+        //const isOnWatchlist = this.props.watchlist.find((wlMovie) => wlMovie.id === m.id)
+
         return (
             <div className="movies">
                 <div className="back-home"> 
@@ -69,18 +86,26 @@ class Movie extends Component {
                 </Row>
                 <Row>
                 <Col sm={12} lg={4}>
-                    <div className="add-watchlist">
+                    {/*<div className="add-watchlist">
                         <Button type="button"><span><FontAwesome className="faStar-watchlist" name="star" /></span>&nbsp;&nbsp;Add Watchlist</Button>
-                    </div>
+                    </div>*/}
+                    {!isOnWatchlist && <Button type="button" onClick={() => {
+                        this.props.emitter.emit('addToWatchList', m)
+                    }}>
+                    <span><FontAwesome className="faStar-watchlist" name="star" /></span>&nbsp;&nbsp;Add to Watchlist
+                    </Button>}
+                    {isOnWatchlist && <Button type="button" onClick={() => {
+                    this.props.emitter.emit('removeFromWatchList', m)
+                    }}>
+                    Remove from Watchlist
+                    </Button> }
                 </Col>
                 <Col sm={12} lg={8} className="star-col">
                 {this.state.actors ? 
-                    <div className="star-grid">
-                        <Grid header={'Top Billed Cast'}>                          
-                            {this.state.actors.slice(0, 5).map( (element, i) => {
-                                return <Actor key={i} actor={element} />
-                            })}
-                        </Grid>
+                    <div className="star-grid">                         
+                        {this.state.actors.slice(0, 5).map( (element, i) => {
+                            return <Actor key={i} actor={element} />
+                        })}
                     </div>
                     : null }
                     {!this.state.actors && !this.state.loading ? <h1>No Movie Found!</h1> : null }

@@ -4,14 +4,16 @@
 }
 
 .star-grid {
-    width: 95%;
-    height: 310px;
+    width: 85%;
+    height: 257px;
     border-bottom: 2px solid #00E4BD;
 }
 
 .actor {
     width: 105px;
-    height: 158px;
+    height: auto;
+    float: left;
+    margin-right: 47px;
 }
 
 .actor img {
